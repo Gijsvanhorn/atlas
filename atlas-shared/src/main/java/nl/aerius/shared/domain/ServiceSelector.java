@@ -74,6 +74,9 @@ public abstract class ServiceSelector implements Serializable {
   }
 
   @Nullable
+  public abstract List<String> searchTags();
+
+  @Nullable
   public abstract HashMap<String, String> tags();
 
   @Nullable
@@ -94,6 +97,8 @@ public abstract class ServiceSelector implements Serializable {
     public abstract Builder tags(HashMap<String, String> value);
 
     public abstract Builder selectors(List<ServiceSelector> value);
+
+    public abstract Builder searchTags(List<String> value);
 
     public abstract ServiceSelector build();
   }
